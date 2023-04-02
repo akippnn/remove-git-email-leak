@@ -7,8 +7,6 @@
 <p align="center">
   <a href="https://www.python.org"><img src="https://img.shields.io/badge/language-python-blue.svg?style=flat"></a>
   <a href="/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue?style=flat"></a>
-  <img src="https://img.shields.io/badge/run%20on-Linux-orange?logo=linux&style=flat" />
-</p>
 
 GitHub uses your commit email address to associate commits with your GitHub account. When a user makes commits to a public repository, their email address is pushed with the commit. 
 
@@ -19,8 +17,13 @@ However, any commits you made before changing your commit email address are stil
 ## Getting Started
 
 ### Prerequisites
-- This `email_fix.py` script is meant to run on Linux. If you're using Windows 10 and above, I recommend running [Ubuntu](https://ubuntu.com/wsl) via WSL. You can follow the [documentation from Microsoft to install WSL](https://docs.microsoft.com/en-us/windows/wsl/install). 
-What things you need to run the program:
+- The `email_fix.py` script is meant to run on Linux.  
+  If you are not using Linux, a `Dockerfile` is included for you but you will need `Docker` to use it. Inside the repository, please run the following command:
+  ```pwsh
+  docker build -t remove-git-email-leak . && docker run -it remove-git-email-leak
+  ```
+  Then please skip ahead to (usage)[#usage].
+- What things you need to run the program:
 - [Python3](https://www.python.org/) and PIP can be installed using `APT package manager` by running: 
   ```bash
   sudo apt install python3 python3-pip
